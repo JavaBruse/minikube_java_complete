@@ -1,17 +1,17 @@
+# Проект контейнеризации и развертывания ИИ-приложений в Kubernetes
 ## Структура:
 
-Example.java - Основное Java приложение с HTTP сервером
-Dockerfile - Сборка Docker образа с multi-stage build
-docker-compose.yml - Локальный запуск приложения в Docker
-deployment.yaml - Kubernetes деплоймент с 3 репликами
-service.yaml - Kubernetes сервис типа LoadBalancer
-ingress.yaml - Ingress для маршрутизации внешнего трафика
-hpa.yaml - Horizontal Pod Autoscaler для автоскейлинга
-prometheus-deployment.yaml - Развертывание Prometheus в кластере
-prometheus-config.yaml - Конфигурация Prometheus для сбора метрик
-grafana-compost.yml - Docker Compose для запуска Grafana
-load_test.ps1 - Скрипт нагрузочного тестирования с Windows
-Example.class - Скомпилированный Java байткод
+* Example.java - Основное Java приложение с HTTP сервером
+* Dockerfile - Сборка Docker образа с multi-stage build
+* docker-compose.yml - Локальный запуск приложения в Docker
+* deployment.yaml - Kubernetes деплоймент с 3 репликами
+* service.yaml - Kubernetes сервис типа LoadBalancer
+* ingress.yaml - Ingress для маршрутизации внешнего трафика
+* hpa.yaml - Horizontal Pod Autoscaler для автоскейлинга
+* prometheus-deployment.yaml - Развертывание Prometheus в кластере
+* prometheus-config.yaml - Конфигурация Prometheus для сбора метрик
+* grafana-compost.yml - Docker Compose для запуска Grafana
+* load_test.ps1 - Скрипт нагрузочного тестирования с Windows
 
 # Команды проекта
 ## 1. Установка и настройка Minikube
