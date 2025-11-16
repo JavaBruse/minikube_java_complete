@@ -8,17 +8,16 @@ public class Example {
     public static void main(String[] args) throws IOException {
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
 
-        // Анализ тональности
+        // Тональность
         server.createContext("/text-tone", exchange -> {
             try {
                 String requestBody = new String(exchange.getRequestBody().readAllBytes(), StandardCharsets.UTF_8);
                 String text = "no_text";
 
-                // Просто берем ВСЁ что после "text": и до конца
                 if (requestBody.contains("\"text\"")) {
                     String[] parts = requestBody.split("\"text\"\\s*:\\s*\"");
                     if (parts.length > 1) {
-                        text = parts[1].replaceAll("\".*", ""); // обрезаем после кавычки
+                        text = parts[1].replaceAll("\".*", "");
                     }
                 }
 
@@ -31,7 +30,7 @@ public class Example {
             }
         });
 
-        // Health check
+        // Health
         server.createContext("/health", exchange -> {
             String response = "{\"status\": \"OK\"}";
             sendResponse(exchange, response, "application/json");
